@@ -7,7 +7,7 @@ const Dashboard = ({groups}) => {
   <div>
     <h1>Dashboard</h1>
     {groups.map(group => (
-      <ConnectedTaskList name={group.name} id={group.id} />
+      <ConnectedTaskList key={group.id} name={group.name} id={group.id} />
     ))}
   </div>  
 );
