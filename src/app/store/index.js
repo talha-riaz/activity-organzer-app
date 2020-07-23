@@ -1,22 +1,31 @@
 
 import {createStore, applyMiddleware} from 'redux';
-import {defaultState} from '../../server/defaultState';
 import { createLogger } from 'redux-logger';
 import  createSagaMiddleware  from 'redux-saga'
-
-const sagaMiddleware = createSagaMiddleware();
+import {combinedReducer} from './reducers'
 import * as sagas from './sagas.mock'
 
-const reducer = (state = defaultState, action) => {
-  console.log('Hello from reducer', action.type);
-  return state;
-}
 
+/*creating sagaMiddleWare to:
+* 1. Pass sagaMiddleWare as an argument to createStore
+* 2. Use sagaMiddleWare to run the saga on each of the generator function sagas defined.
+*/
+const sagaMiddleware = createSagaMiddleware();
+
+/*
+creating the redux store, and passing the following;
+* 1. Combined reducer, derived from individual reducers
+* 2. applyMiddleware to apply the middle layer for sagas.
+*    applyMiddleware takes two arguments:
+*    2a. createLogger() to log all the actions dispatched.
+*    2b. sagaMiddleware, to apply the redux saga  
+*/
 export const store = createStore(
-    reducer, applyMiddleware(  createLogger(), sagaMiddleware  )  
+    combinedReducer, applyMiddleware(  createLogger(), sagaMiddleware  )  
                                   );
 /*
-DONT FORGET TO ADD IN A FOR LOOP TO CAPTURE ALL THE SAGAS
+Running redux sagas on each of the sagas defined./
 */
-
-sagaMiddleware.run(sagas.taskCreationSaga);
+for(let saga in sagas){
+sagaMiddleware.run(sagas[saga]);
+}
