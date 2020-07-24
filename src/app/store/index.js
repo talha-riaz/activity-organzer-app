@@ -3,7 +3,8 @@ import {createStore, applyMiddleware} from 'redux';
 import { createLogger } from 'redux-logger';
 import  createSagaMiddleware  from 'redux-saga'
 import {combinedReducer} from './reducers'
-import * as sagas from './sagas.mock'
+
+import * as sagas from './sagas'
 
 
 /*creating sagaMiddleWare to:
@@ -27,5 +28,5 @@ export const store = createStore(
 Running redux sagas on each of the sagas defined./
 */
 for(let saga in sagas){
-sagaMiddleware.run(sagas[saga]);
+    sagaMiddleware.run(sagas[saga]);
 }
