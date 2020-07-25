@@ -55,6 +55,18 @@ const tasks = (tasks = defaultState.tasks, action) => {
   const users = (users = defaultState.users, action) => {
     return users;
   }
+
+  const session = (userSession = defaultState.session || {}, action ) => {
+    let  {type, authenticated, session} = action;
+    switch (type){
+      case mutations.REQUEST_AUTHENTICATE_USER:
+        return {...userSession, authenticated: mutations.AUTHENTICATING};
+      case mutations.PROCESSING_AUTHENTICATE_USER:
+        return {...userSession, authenticated};
+      default:
+        return userSession;
+    }
+  }
   
   /*
   Combining the reducers and exporting the combined reducer...
@@ -64,6 +76,7 @@ const tasks = (tasks = defaultState.tasks, action) => {
         tasks,
         comments,
         groups,
-        users
+        users,
+        session
       }
     );

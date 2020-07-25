@@ -3,7 +3,6 @@ import uuid from 'uuid';
 import axios from 'axios';
 
 import * as mutations from './mutations';
-import { ConnectedTaskList } from '../components/TaskList';
 
 const url = "http://localhost:7777";
 
@@ -46,5 +45,21 @@ export function* taskModificationSaga(){
                 isComplete: task.isComplete
             }
         })
+    }
+}
+
+export function* userAuthenticatedSaga(){
+    while(true){
+        const {username, password} = yield take (mutations.REQUEST_AUTHENTICATE_USER);
+        console.log("Hello from saga");
+            try{
+                const {data} = axios.post(url + `/authenticate`, {username, password});
+                if(!data){
+                    throw new Error();
+                }
+            } catch(e){
+                console.log("cant authenticate");
+                yield put (mutations.processAuthenticateUser(mutations.NOT_AUTHENTICATED));
+            }
     }
 }
