@@ -6,8 +6,10 @@ import * as mutations from './mutations'
 /*
 All the individual reducers...
 */
-const tasks = (tasks = defaultState.tasks, action) => {
+const tasks = (tasks = [], action) => {
     switch(action.type){
+      case mutations.SET_STATE:
+        return action.state.tasks;
       case mutations.CREATE_TASK:
         return [...tasks, {
             name: 'New Task',
@@ -44,21 +46,27 @@ const tasks = (tasks = defaultState.tasks, action) => {
     return tasks;
   }
   
-  const comments = (comments = defaultState.comments, action) => {
+  const comments = (comments = [], action) => {
     return comments;
   }
   
-  const groups = (groups = defaultState.groups, action) => {
+  const groups = (groups = [], action) => {
+    switch (action.type) {
+      case mutations.SET_STATE:
+        return action.state.groups;
+    }
     return groups;
   }
   
-  const users = (users = defaultState.users, action) => {
+  const users = (users = [], action) => {
     return users;
   }
 
   const session = (userSession = defaultState.session || {}, action ) => {
     let  {type, authenticated, session} = action;
     switch (type){
+      case mutations.SET_STATE:
+        return {...userSession, id: action.state.session.id}
       case mutations.REQUEST_AUTHENTICATE_USER:
         return {...userSession, authenticated: mutations.AUTHENTICATING};
       case mutations.PROCESSING_AUTHENTICATE_USER:
