@@ -9,7 +9,6 @@ export const AUTHENTICATING = `AUTHENTICATING`;
 export const AUTHENTICATED = `AUTHENTICATED`;
 export const NOT_AUTHENTICATED = `NOT_AUTHENTICATED`;
 export const SET_STATE = `SET_STATE`;
-export const EDIT_COMMENTS = `EDIT_COMMENTS`;
 
 
 export const requestTaskCreation = (groupID) => {
