@@ -1,6 +1,5 @@
 import { defaultState } from "./defaultState";
 import {connectDB} from "./connect-db";
-import {MongoClient} from 'mongodb';
 
 async function initializeDB(){
     let db = await connectDB();
