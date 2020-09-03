@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom'
 
 const TaskList = ({tasks, name, id, createNewTask}) => {
     return(
-        <div>
+        <div className="card p-2 m-2">
             <div>
                 <h1>{name}</h1>
                 {tasks.map(task => 
                 {
                     return (
                     <Link to={`/task/${task.id}`} key={task.id}>
-                        <div 
+                        <div className="card p-2 mt-2"
                             >{task.name}</div>
                     </Link>
                     )
                 }   
                )}
             </div>
-            <button onClick={() => createNewTask(id)}>Add New</button>
+            <button onClick={() => createNewTask(id)} className="btn btn-primary btn-block mt-2">Add New</button>
         </div>
     );
 }
