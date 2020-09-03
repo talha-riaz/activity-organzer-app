@@ -31,7 +31,7 @@ export const authenticationRoute = app => {
         }
 
         let hash = md5(password);
-        let passwordCorrect = hash === user.passwordHash;
+        let passwordCorrect = password === user.passwordHash;
 
         if(!passwordCorrect){
             return res.status(500).send("Incorrect password");

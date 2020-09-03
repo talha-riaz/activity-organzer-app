@@ -1,6 +1,6 @@
 import md5 from 'md5';
 
-const defaultStateObject = {
+export const defaultState = {
    // session: {
     //    authenticated: false,
    // },
@@ -8,7 +8,7 @@ const defaultStateObject = {
         id:"U1",
         name:"Dev",
         friends:[`U2`],
-        passwordHash:md5("TUPLES")
+        passwordHash:"1234"
     },{
         id:"U2",
         name:"C. Eeyo",
@@ -68,4 +68,3 @@ const defaultStateObject = {
     }]
 };
 
-export const defaultState = defaultStateObject;

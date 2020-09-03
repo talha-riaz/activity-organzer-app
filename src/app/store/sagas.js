@@ -49,15 +49,17 @@ export function* taskModificationSaga(){
     }
 }
 
+
 export function* userAuthenticatedSaga(){
     while(true){
         const {username, password} = yield take (mutations.REQUEST_AUTHENTICATE_USER);
         console.log("Hello from saga");
             try{
                 const {data} = yield axios.post(url + `/authenticate`, {username, password});
-                if(!data){
-                    throw new Error();
-                }
+                //if(!data){
+                    //console.log("NO DATA COMING!!!!!!!!!!")
+                    //throw new Error();
+                //}
                 console.log("Authenticated", data);
                 yield put(mutations.setState(data.state));
                 yield put(mutations.processAuthenticateUser(mutations.AUTHENTICATED));
@@ -65,8 +67,6 @@ export function* userAuthenticatedSaga(){
             } catch(e){
                 console.log("cant authenticate");
                 yield put (mutations.processAuthenticateUser(mutations.NOT_AUTHENTICATED));
-            }
-
-            
+            }          
     }
 }
