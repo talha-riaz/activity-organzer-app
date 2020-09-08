@@ -11,7 +11,7 @@ let setUserSessionInactive = () => {
 return (
 <React.Fragment>
         <header class="header-div">
-            <img class="logo" src={require("../assets/insta.png")} alt="logo" />
+            <img class="logo" src={require("../assets/react.png")} alt="logo" />
             <nav class="navbar">
                 <ul class="nav__links">
                     <li><a href="/dashboard"> Dashboard </a></li>

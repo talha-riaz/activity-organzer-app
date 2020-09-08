@@ -9,7 +9,7 @@ return (
   <div class="container">
     <div class="row">
       <div class="col-sm-6 d-none d-md-block">
-        <img src={require('../assets/phone.png')} class="phone" />
+        <img src={require('../assets/react-logo.png')} class="react-logo" />
       </div>
       <div class="col-sm-6">
         <div class="right-column d-block text-center">
