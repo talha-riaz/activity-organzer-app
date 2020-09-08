@@ -15,10 +15,18 @@ module.exports = {
     historyApiFallback: true
   },
   module:{
-    rules: [{
+    rules: [
+      {
       test: /\.jsx?/,
       loader:'babel-loader'
-    }]
+      },
+      {
+      test: /\.css?/,
+      loader: [
+          'style-loader',
+          'css-loader'
+        ]  
+      }
+    ]
   }
-
 };

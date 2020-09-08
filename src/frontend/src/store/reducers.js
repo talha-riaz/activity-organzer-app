@@ -1,5 +1,5 @@
 
-import { defaultState } from '../../server/defaultState'
+import { defaultState } from './defaultState'
 import { combineReducers } from 'redux'
 import * as mutations from './mutations'
 
@@ -63,7 +63,7 @@ const tasks = (tasks = [], action) => {
   }
 
   const session = (userSession = defaultState.session || {}, action ) => {
-    let  {type, authenticated, session} = action;
+    let  {type, authenticated, session, registered} = action;
     switch (type){
       case mutations.SET_STATE:
         return {...userSession, id: action.state.session.id}
@@ -71,6 +71,8 @@ const tasks = (tasks = [], action) => {
         return {...userSession, authenticated: mutations.AUTHENTICATING};
       case mutations.PROCESSING_AUTHENTICATE_USER:
         return {...userSession, authenticated};
+      case mutations.SET_REGISTRATION_STATUS:
+        return {...userSession, registered}
       default:
         return userSession;
     }

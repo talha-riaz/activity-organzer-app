@@ -1,0 +1,54 @@
+import React from 'react';
+import './SignupScreen.css';
+import {connect} from 'react-redux';
+import * as mutations from '../store/mutations';
+
+function Signup({requestSignupUser, registered}) {
+  return (
+    <div className="Login">
+      <div class="container-signup">
+          <div class="col-sm-12 vertical-center">
+            <div class="right-column-test text-center">
+              <img src={require('../assets/insta.png')} class="insta"/>
+              <p class="info">Sign up to see photos and videos from your friends.</p>
+              <form class="login-form" onSubmit={requestSignupUser}>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username" name="username"></input>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" name="password"></input>
+                </div>
+                <div class="button-div">
+                  <button type="submit" class="btn btn-dark btn-block">Sign up</button>
+                </div>
+              </form>
+            </div>
+            <div class="right-column-under-signup text-center">
+              <p class="signup-info">Already have an account? <a href="/">Log in</a></p>           
+            </div>
+          </div>
+        </div>
+      </div>
+  );
+}
+
+const mapStateToProps = (state) => (
+  {   
+      registered: state.session.registered
+  }
+)
+
+const mapDispatchToProps = (dispatch) => {
+  return (
+      {
+          requestSignupUser(e) {
+              e.preventDefault();
+              const username = e.target[`username`].value;
+              const password = e.target[`password`].value;
+              dispatch(mutations.requestSignUp(username, password));
+          }
+      }
+  );
+}
+
+export const ConnectedSignup = connect (mapStateToProps, mapDispatchToProps) (Signup);

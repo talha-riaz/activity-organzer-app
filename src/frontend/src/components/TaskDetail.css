@@ -1,0 +1,67 @@
+.taskdetail-grid{
+    display: inline-block;
+    text-align: left;
+    padding: 50px;
+    background-color: #ffd7c5;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 700px;
+    border-radius: 25px;
+    height: 325px;
+    box-shadow: 0px 1px 4px rgba(230, 222, 158, 0.801) inset, 0px 0px 10px rgba(255, 255, 255, 0.801);
+}
+
+.taskdetail-input-div 
+{
+    height: 40px;
+    margin: 10px;
+    margin-top: 0px;
+    border-radius: 50px;
+    width: 250px;
+    background-color: black;
+}
+
+.taskdetail-input-field
+{
+    margin-top: 5.5px;
+    margin-left: 15px;
+}
+
+.taskdetail-select-div
+{
+    margin: 10px;
+    padding-left: 10px;
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    border:1px solid #cccccc;
+    background-color: rgb(118, 118, 252);
+}
+
+.taskdetail-select{
+    background-color: rgb(118, 118, 252);
+    color: white;
+    font-weight: bold;
+    width:140px;
+    height:40px;
+    border:0px;
+    outline:none;
+}
+
+.taskdetail-delete-button
+{
+    background-color: rgb(243, 89, 89);
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 80px;
+}
+
+.taskdetail-dashboard-button
+{
+    background-color: rgb(43, 41, 41);
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 80px;
+}

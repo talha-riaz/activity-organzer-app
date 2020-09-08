@@ -4,6 +4,7 @@ import { createLogger } from 'redux-logger';
 import  createSagaMiddleware  from 'redux-saga'
 import {combinedReducer} from './reducers'
 import * as sagas from './sagas'
+import {getState, setState, saveState} from './userSession'
 
 
 /*creating sagaMiddleWare to:
@@ -11,6 +12,8 @@ import * as sagas from './sagas'
 * 2. Use sagaMiddleWare to run the saga on each of the generator function sagas defined.
 */
 const sagaMiddleware = createSagaMiddleware();
+
+/* const state = getState(); */
 
 /*
 creating the redux store, and passing the following;
@@ -29,3 +32,7 @@ Running redux sagas on each of the sagas defined./
 for(let saga in sagas){
     sagaMiddleware.run(sagas[saga]);
 }
+
+/* store.subscribe(()=>{
+    saveState(store.getState());
+}) */
