@@ -3,7 +3,7 @@ import './SignupScreen.css';
 import {connect} from 'react-redux';
 import * as mutations from '../store/mutations';
 
-function Signup({requestSignupUser, registered}) {
+function Signup({requestSignupUser, error}) {
   return (
     <div className="Login">
       <div class="container-signup">
@@ -13,10 +13,14 @@ function Signup({requestSignupUser, registered}) {
               <p class="info">Sign up to see photos and videos from your friends.</p>
               <form class="login-form" onSubmit={requestSignupUser}>
                 <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nickname" name="nickname"></input>
+                </div>
+                <div class="form-group">
                   <input type="text" class="form-control" placeholder="Username" name="username"></input>
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control" placeholder="Password" name="password"></input>
+                  {<p class="signup-error">{error}</p>}
                 </div>
                 <div class="button-div">
                   <button type="submit" class="btn btn-dark btn-block">Sign up</button>
@@ -34,7 +38,7 @@ function Signup({requestSignupUser, registered}) {
 
 const mapStateToProps = (state) => (
   {   
-      registered: state.session.registered
+      error: state.session.error
   }
 )
 
@@ -43,9 +47,10 @@ const mapDispatchToProps = (dispatch) => {
       {
           requestSignupUser(e) {
               e.preventDefault();
+              const nickname = e.target[`nickname`].value;
               const username = e.target[`username`].value;
               const password = e.target[`password`].value;
-              dispatch(mutations.requestSignUp(username, password));
+              dispatch(mutations.requestSignUp(nickname, username, password));
           }
       }
   );

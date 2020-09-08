@@ -11,7 +11,7 @@ export async function assembleUserState(user){
     ];
 
     return {
-        session:{authenticated:`AUTHENTICATED`,id:user.id},
+        session:{authenticated:`AUTHENTICATED`,id:user.id, nickname: user.nickname},
         groups:await db.collection(`groups`).find({owner:user.id}).toArray(),
         tasks,
         users,

@@ -8,7 +8,10 @@ export const setSessionGroups = (groups) => {
     localStorage.setItem('sessionGroups', groups)
 } 
 
-export const getSessionState = () => (localStorage.getItem('sessionState'));
+export const getSessionState = () => {
+    let value = localStorage.getItem('sessionState')
+    return value;
+}
 
 export const getSessionGroups = () => (localStorage.getItem('sessionGroups'))
 

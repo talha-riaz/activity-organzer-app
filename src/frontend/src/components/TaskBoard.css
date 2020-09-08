@@ -1,0 +1,18 @@
+.group-task-elements{
+    background-color: rgb(208, 208, 236);
+    border: 1px solid white;
+    min-height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.group-task-elements-none{
+    border: 1px solid white;
+    border-color: rgb(230, 230, 230);
+    min-height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(155, 153, 153);
+}

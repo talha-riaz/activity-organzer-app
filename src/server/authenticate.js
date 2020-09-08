@@ -14,14 +14,14 @@ export const authenticationRoute = app => {
         let user = await collection.findOne({name:username});
 
         if(!user){
-            return res.status(500).send("User not found");
+            return res.status(422).send("User not found.");
         }
 
         let hash = md5(password);
         let passwordCorrect = password === user.passwordHash;
 
         if(!passwordCorrect){
-            return res.status(500).send("Incorrect password");
+            return res.status(500).send("Incorrect password.");
         }
 
         let token = uuid();

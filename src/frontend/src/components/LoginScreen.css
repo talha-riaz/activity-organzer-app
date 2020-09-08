@@ -9,6 +9,12 @@
     margin-right: 0;
   
   }
+
+  .login-error
+  {
+    margin-top: 5px;
+    color: rgb(214, 0, 0);
+  }
   
   .right-column
   {

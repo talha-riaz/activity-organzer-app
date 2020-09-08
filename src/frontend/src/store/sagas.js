@@ -92,36 +92,42 @@ export function* userAuthenticatedSaga(){
                 history.push('/dashboard');
             } catch(e){
                 console.log("cant authenticate");
+                let serverError = e.response.data;
                 yield put (mutations.processAuthenticateUser(mutations.NOT_AUTHENTICATED));
+                yield put(mutations.setRegistrationStatus({error: serverError}));
             }          
     }
 }
 
 export function* userSignupSaga(){
     while(true){
-        const {username, password} = yield take (mutations.REQUEST_SIGN_UP)
+        const {nickname, username, password} = yield take (mutations.REQUEST_SIGN_UP)
         try {
             console.log("Hello from saga" + username + password);
-            const {data} = yield axios.post(url + `/usersignup`, {
+            const {data} = yield axios.post(url + `/user/signup`, {
                 user: {
+                    nickname,
                     name:username,
                     password
                 }
             });
+            console.log("NICKNAME THAT WAS SENT: " + nickname);
             console.log("Hello from signup saga!")
             console.log("=======USER FOUND=======")
             console.log(data);
             console.log("========================")
-
-            yield put(mutations.setState({...data.state, session:{id:data.userID}}));
+            console.log("NICKNAME RECEIVED: " + data.nickname)
+            yield put(mutations.setState({...data.state, session:{id:data.userID, nickname}}));
             yield put (mutations.processAuthenticateUser(mutations.AUTHENTICATED));
             
             setSessionState('active');
             history.push('/dashboard');
 
         }
-        catch{
-            console.log("Error!!!!!");
+        catch(e){
+            console.log("cant signup!");
+            let serverError = e.response.data;
+            yield put(mutations.setRegistrationStatus({error: serverError}));
         }
     }
 }

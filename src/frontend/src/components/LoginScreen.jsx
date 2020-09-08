@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import './LoginScreen.css';
 import * as mutations from '../store/mutations';
 
-function LoginComponent({authenticateUser, authenticated}) {
+function LoginComponent({authenticateUser, error}) {
 return (
 <div className="Login">
   <div class="container">
@@ -21,6 +21,7 @@ return (
             </div>
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password" name="password"></input>
+              <p class="login-error">{error}</p>
             </div>
             <div class="button-div">
               <button type="submit" class="btn btn-primary btn-block">Log in</button>
@@ -39,7 +40,7 @@ return (
 
 const mapStateToProps = (state) => (
 {
-authenticated: state.session.authenticated
+error: state.session.error
 }
 )
 

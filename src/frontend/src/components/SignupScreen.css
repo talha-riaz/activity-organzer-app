@@ -10,7 +10,11 @@
   
   }
 
-  
+  .signup-error
+  {
+    margin-top: 5px;
+    color: rgb(214, 0, 0);
+  }
 
   .right-column-test
   {

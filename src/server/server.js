@@ -106,22 +106,20 @@ app.post('/task/delete', async (req, res) => {
 
 });
 
-app.post('/usersignup', async (req, res) => {
+app.post('/user/signup', async (req, res) => {
 
     let user = req.body.user;
     let db = await connectDB();
     let collection = db.collection(`users`);
 
+    const nickname = user.nickname;
     let username = user.name;
     let password = user.password;
 
     let userFound = await collection.findOne({name: username});
-  
-    //tester line
-    //res.send("Username: " + username + " and password: " + password)
     
     if(userFound){
-        res.status(500).send({message:"Username already exists! Please try another."});
+        res.status(500).send("Username already exists!");
         return;
     }
 
@@ -129,6 +127,7 @@ app.post('/usersignup', async (req, res) => {
 
     let newUser = {
         id: userID,
+        nickname,
         name:username,
         friends:[],
         passwordHash:password
@@ -154,8 +153,8 @@ app.post('/usersignup', async (req, res) => {
 
     await db.collection(`groups`).insertMany(standardGroups);
 
-    let state = await assembleUserState({id: userID, name: username});
+    let state = await assembleUserState({id: userID, name: username, nickname});
 
-    res.status(200).send({userID, state});
+    res.status(200).send({userID, nickname, state});
 
 });

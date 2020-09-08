@@ -70,16 +70,16 @@ const tasks = (tasks = [], action) => {
   }
 
   const session = (userSession = defaultState.session || {}, action ) => {
-    let  {type, authenticated, session, registered} = action;
+    let  {type, authenticated, session} = action;
     switch (type){
       case mutations.SET_STATE:
-        return {...userSession, id: action.state.session.id}
+        return {...userSession, id: action.state.session.id, nickname: action.state.session.nickname, error: action.state.session.error}
       case mutations.REQUEST_AUTHENTICATE_USER:
         return {...userSession, authenticated: mutations.AUTHENTICATING};
       case mutations.PROCESSING_AUTHENTICATE_USER:
         return {...userSession, authenticated};
       case mutations.SET_REGISTRATION_STATUS:
-        return {...userSession, registered}
+        return {...userSession, error: session.error}
       default:
         return userSession;
     }

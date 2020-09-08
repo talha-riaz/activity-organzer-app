@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import './Dashboard.css';
-import Widget from './Widget';
+import {ConnectedWidget} from './Widget';
 import {ConnectedGroupBoard} from './GroupBoard'
 import Footer from './Footer';
 import {Route} from 'react-router-dom';
@@ -12,7 +12,7 @@ return (
 <React.Fragment>
     <NavBar />
     <div class="dash-container">
-        <Widget/>
+        <ConnectedWidget/>
         <Route exact path='/dashboard' component={ConnectedGroupBoard}/>
         <Route path='/dashboard/task/:idInLink' component={ConnectedTaskDetail} />
         

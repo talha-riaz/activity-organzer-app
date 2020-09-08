@@ -92,21 +92,22 @@ export const setState = (state = {}) => ({
     state
 })
 
-export const requestSignUp = (username, password) => {
+export const requestSignUp = (nickname, username, password) => {
     return (
         {
             type: REQUEST_SIGN_UP,
+            nickname,
             username,
             password
         }
     )
 }
 
-export const setRegistrationStatus = (registered) => {
+export const setRegistrationStatus = (session) => {
     return (
         {
             type: SET_REGISTRATION_STATUS,
-            registered
+            session
         }
     )
 }

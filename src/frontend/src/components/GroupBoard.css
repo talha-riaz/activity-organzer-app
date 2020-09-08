@@ -21,14 +21,7 @@
     height: fit-content;
 }
 
-.group-task-elements{
-    background-color: rgb(208, 208, 236);
-    border: 1px solid white;
-    min-height: 40px;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 7px;
-}
+
 
 .group-title
 {
