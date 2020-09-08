@@ -52,7 +52,7 @@ export function* taskModificationSaga(){
 
 export function* taskDeletionSaga(){
     while(true){
-        const {taskID} = yield take (mutations.deleteTaskItem);
+        const {taskID} = yield take (mutations.DELETE_TASK);
         console.log("The task id is" + taskID);
 
         const {data} = yield axios.post(url+'/task/delete', {
@@ -62,13 +62,8 @@ export function* taskDeletionSaga(){
         })
 
         console.log("The data recieved is: " + data);
-
-        //READ CAREFULLY
-        //PUT ACTION TO REDUCER
-        //TO UPDATE FRONTEND STATE
-        //
-
-        //history.push('/dashboard');
+        yield put (mutations.updateTasksAfterDeletion(taskID));
+        history.push('/dashboard');
     }
 }
 

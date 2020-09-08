@@ -12,6 +12,7 @@ export const NOT_AUTHENTICATED = `NOT_AUTHENTICATED`;
 export const SET_STATE = `SET_STATE`;
 export const REQUEST_SIGN_UP = `REQUEST_SIGN_UP`;
 export const SET_REGISTRATION_STATUS = `SET_REGISTRATION_STATUS`;
+export const UPDATE_TASKS_AFTER_DELETION = `UPDATE_TASKS_AFTER_DELETION`;
 
 
 export const requestTaskCreation = (groupID, userID) => {
@@ -61,6 +62,14 @@ export const deleteTaskItem = (taskID) => {
         taskID
     }
 }
+
+export const updateTasksAfterDeletion = (taskID) => {
+    return {
+        type: UPDATE_TASKS_AFTER_DELETION,
+        taskID
+    }
+}
+
 
 export const requestAuthenticateUser = (username, password) => {
     return (

@@ -29,7 +29,9 @@ function TaskDetail({
                     <Link to="/dashboard">
                         <button class="taskdetail-dashboard-button">Return</button>
                     </Link>
+                    <Link to="/dashboard">
                     <button onClick={()=>{deleteTask(id)}} class="taskdetail-delete-button">Delete</button>
+                    </Link>
                 </div>
             </div>
         </React.Fragment>

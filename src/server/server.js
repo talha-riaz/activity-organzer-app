@@ -94,7 +94,9 @@ app.post('/task/delete', async (req, res) => {
     let taskID = task.taskID;
 
     let db = await connectDB();
-    let collection = db.collection(`tasks`).deleteOne(task);
+    let collection = db.collection(`tasks`);
+    await collection.deleteOne({id: taskID});
+
 
     res.status(200).send("Sending back task ID" + taskID)
 

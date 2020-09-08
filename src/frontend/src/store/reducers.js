@@ -42,6 +42,13 @@ const tasks = (tasks = [], action) => {
             task
             )
         )
+       case mutations.UPDATE_TASKS_AFTER_DELETION:
+        console.log("Hello from reducer man");
+        return tasks.filter(
+          task => {
+            return ((task.id !== action.taskID))
+          } 
+        )
     }
     return tasks;
   }
