@@ -41,6 +41,7 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 # Technology Stack
 This application is build using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
 
+|  |  |  |  |  |
 |---|---|---|---|---|
 | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/mongo.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/express.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/react-logo.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/node.png"></img>  |  <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/redux.png"></img> |
 
