@@ -1,6 +1,10 @@
 # Activity Organizer
 A full stack web application built with React/Redux & Express/Node. 
 
+| Authentication        | Dashboard |
+| ------------- |:-------------:| 
+| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app.png"></img>     | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app1.png"></img> | 
+
 # Setup Instructions
 
 ## Server
