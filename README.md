@@ -1,5 +1,5 @@
-# activity-organzer-app
-A full stack web application built using Express.js and React/Redux. 
+# Activity Organizer
+A full stack web application built with React/Redux & Express/Node. 
 
 # Setup Instructions
 
