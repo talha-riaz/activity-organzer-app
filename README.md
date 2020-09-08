@@ -1,5 +1,6 @@
 # Activity Organizer
 A full stack web application built with React/Redux & Express/Node. 
+Allows a user to register and organize activity tasks by Todo, Doing and Done. Tasks can be created, viewed, updated and deleted. 
 
 | Login        | Sign up |
 | ------------- |:-------------:| 
