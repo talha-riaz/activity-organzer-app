@@ -3,13 +3,13 @@ A full stack web application built using Express.js and React/Redux.
 
 # Setup Instructions
 
-# Server
+## Server
 
 1. After cloning the project, from the Terminal navigate to the root directory of this repository (./activity-organizer-app).
 2. Run the command `npm install`. This will install all the dependencies for the server.
 3. Run the command `npm start`. This will start the server on http://localhost:7777
 
-# Client
+## Client
 
 1. After running the server, in a new terminal window, navigate to ./activity-organizer-app/src/frontend
 2. Run the command `npm install`. This will install all the dependencies for the frontend.
