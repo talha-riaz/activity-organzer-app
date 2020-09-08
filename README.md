@@ -1,9 +1,14 @@
 # Activity Organizer
 A full stack web application built with React/Redux & Express/Node. 
+Allows a user to register and organize activity tasks by Todo, Doing and Done. Tasks can be created, viewed, updated and deleted. 
 
-| Authentication        | Dashboard |
+| Login        | Sign up |
 | ------------- |:-------------:| 
-| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app.png"></img>     | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app1.png"></img> | 
+| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/login.png"></img>     | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/signup.png"></img> | 
+
+| Dashboard        | Update/Delete |
+| ------------- |:-------------:| 
+| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app1.png"></img>     | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/app.png"></img> | 
 
 # Setup Instructions
 
@@ -28,5 +33,9 @@ A full stack web application built with React/Redux & Express/Node.
 5. Log in using your credentials.
 6. The tasks persist and each user gets a personalized experience. 
 
+# Technology Stack
+This application is build using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
+
 # System Architecture
 <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/SystemArchitecture.png"></img>
+
