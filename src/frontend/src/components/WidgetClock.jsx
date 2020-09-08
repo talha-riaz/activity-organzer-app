@@ -1,10 +1,15 @@
 import React from 'react';
 
+let appClock = {
+    fontWeight: "bold"
+}
+
 class Clock extends React.Component {
     constructor(props) {
+      let today = new Date();
       super(props);
       this.state = {
-        time: new Date().toLocaleString()
+        time: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
       };
     }
     componentDidMount() {
@@ -17,15 +22,16 @@ class Clock extends React.Component {
       clearInterval(this.intervalID);
     }
     tick() {
+      let today = new Date();
       this.setState({
-        time: new Date().toLocaleString()
+        time: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
       });
     }
     render() {
       return (
-        <p className="App-clock">
-          The time is {this.state.time}.
-        </p>
+        <div style={appClock}>
+          {this.state.time}
+        </div>
       );
     }
   }

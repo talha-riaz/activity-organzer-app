@@ -2,7 +2,7 @@
 
 .group-flex-grid{
     display: flex;
-    background-color: #e6d9d3;
+    background-color: rgb(187, 187, 187);
     margin: 0 auto;
     margin-bottom: 20px;
     width: 1000px;

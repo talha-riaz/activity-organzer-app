@@ -19,11 +19,23 @@ function Widget({nickname, id}) {
     return (
         <React.Fragment>
             <div class="widget-container">
-                {nickname}
-                {id}
-                {"Logged in at: " + dateTime}
-                {"Session state: " + session}
-                <Clock />
+                <div class="widget-left">
+                    <div class="widget-nickname">
+                        {nickname}
+                    </div>
+                    <div class="widget-login">
+                        {"Logged in at: " + dateTime}
+                    </div>
+                    <div class='widget-session-id'>
+                        {"Session ID: " + id}
+                    </div>
+                    <div class="widget-session-state">
+                        {"Session state: " + session}
+                    </div>
+                </div>
+                <div class="widget-right">
+                    <Clock />
+                </div>                
             </div>
         </React.Fragment>
     )

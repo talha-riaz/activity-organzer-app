@@ -18,13 +18,17 @@
     margin-top: 0px;
     border-radius: 50px;
     width: 250px;
-    background-color: black;
+    background-color: rgb(199, 199, 199);
 }
 
 .taskdetail-input-field
 {
-    margin-top: 5.5px;
-    margin-left: 15px;
+    margin-top: 8px;
+    margin-left: 17px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
 }
 
 .taskdetail-select-div
