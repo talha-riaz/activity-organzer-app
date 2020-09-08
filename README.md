@@ -17,10 +17,9 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 1. After cloning the project, from the Terminal navigate to the root directory of this repository (./activity-organizer-app).
 2. Run the command `npm install`. This will install all the dependencies for the server.
 3. Run the command `npm start`. This will start the server on http://localhost:7777.
-<div>
-You can verify if the server is running:
-  <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/server.png"></img>
-</div>
+
+ <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/server.png"></img>
+
 
 ## Client
 
