@@ -32,5 +32,9 @@ A full stack web application built with React/Redux & Express/Node.
 5. Log in using your credentials.
 6. The tasks persist and each user gets a personalized experience. 
 
+# Technology Stack
+This application is build using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
+
 # System Architecture
 <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/SystemArchitecture.png"></img>
+
