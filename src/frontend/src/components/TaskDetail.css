@@ -2,7 +2,7 @@
     display: inline-block;
     text-align: left;
     padding: 50px;
-    background-color: #ffd7c5;
+    background-color: #a1a1a1;
     margin: 0 auto;
     margin-bottom: 20px;
     width: 700px;
@@ -18,7 +18,7 @@
     margin-top: 0px;
     border-radius: 50px;
     width: 250px;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(255, 255, 255);
 }
 
 .taskdetail-input-field

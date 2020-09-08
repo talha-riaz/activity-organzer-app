@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css'
+import {Link} from 'react-router-dom'
 import {setSessionState} from '../store/userSession';
 
 function NavBar() {
@@ -14,9 +15,9 @@ return (
             <img class="logo" src={require("../assets/react.png")} alt="logo" />
             <nav class="navbar">
                 <ul class="nav__links">
-                    <li><a href="/dashboard"> Dashboard </a></li>
-                    <li><a href="/dashboard"> About </a></li>
-                    <li><a href="/dashboard"> Contact Dev </a></li>
+                    <Link to={`/dashboard`}><li>Dashboard</li></Link>
+                   {/*  <li> About </li>
+                    <li>Contact Dev</li> */}
                 </ul>
             </nav>
             <a class="navbar-logout" href="/" onClick={setUserSessionInactive}><button>Log out</button></a>
