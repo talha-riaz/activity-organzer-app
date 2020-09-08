@@ -25,4 +25,4 @@ A full stack web application built using Express.js and React/Redux.
 6. The tasks persist and each user gets a personalized experience. 
 
 # System Architecture
-!(https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/SystemArchitecture.png)[]
+<img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/SystemArchitecture.png"></img>
