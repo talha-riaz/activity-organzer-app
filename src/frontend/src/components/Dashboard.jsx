@@ -18,7 +18,7 @@ return (
         
         {/* <ConnectedGroupBoard /> */}
     </div>
-    <Footer/>
+    {/* <Footer/> */}
 </React.Fragment>
 );
 }

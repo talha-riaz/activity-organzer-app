@@ -13,8 +13,9 @@ return (
       </div>
       <div class="col-sm-6">
         <div class="right-column d-block text-center">
-          <img src={require('../assets/insta.png')} class="insta" />
-          <p class="info">Sign up to see photos and videos from your friends.</p>
+          {/* <img src={require('../assets/insta.png')} class="insta" /> */}
+          <h1>Login</h1>
+          <p class="info">Log in to see what's up for today!</p>
           <form class="login-form" onSubmit={authenticateUser}>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Username" name="username"></input>

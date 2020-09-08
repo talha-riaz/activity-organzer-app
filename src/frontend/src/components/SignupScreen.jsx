@@ -9,8 +9,9 @@ function Signup({requestSignupUser, error}) {
       <div class="container-signup">
           <div class="col-sm-12 vertical-center">
             <div class="right-column-test text-center">
-              <img src={require('../assets/insta.png')} class="insta"/>
-              <p class="info">Sign up to see photos and videos from your friends.</p>
+              {/* <img src={require('../assets/insta.png')} class="insta"/> */}
+              <h1>Sign up</h1>
+              <p class="info">Sign up for your personal account.</p>
               <form class="login-form" onSubmit={requestSignupUser}>
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Nickname" name="nickname"></input>
