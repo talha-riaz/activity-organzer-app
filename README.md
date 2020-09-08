@@ -43,7 +43,7 @@ This application is build using the MERN stack (MongoDB, Express, React, Node), 
 
 |  |  |  |  |  |
 |---|---|---|---|---|
-| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/mongo.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/express.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/react-logo.png"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/node.png"></img>  |  <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/redux.png"></img> |
+| <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/mongo.png" width="500px" ></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/express.png" width="500px"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/react-logo.png" width="500px"></img>  | <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/node.png" width="500px"></img>  |  <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/redux.png" width="500px"></img> |
 
 
 # System Architecture
