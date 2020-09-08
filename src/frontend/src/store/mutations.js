@@ -1,3 +1,6 @@
+/*
+All defined actions.
+*/
 export const REQUEST_TASK_CREATION = `REQUEST_TASK_CREATION`;
 export const CREATE_TASK = `CREATE_TASK`;
 export const SET_TASK_COMPLETE = `SET_TASK_COMPLETE`;
@@ -14,7 +17,9 @@ export const REQUEST_SIGN_UP = `REQUEST_SIGN_UP`;
 export const SET_REGISTRATION_STATUS = `SET_REGISTRATION_STATUS`;
 export const UPDATE_TASKS_AFTER_DELETION = `UPDATE_TASKS_AFTER_DELETION`;
 
-
+/*
+All the actions that can be dispatched.
+*/
 export const requestTaskCreation = (groupID, userID) => {
     return {
     type: REQUEST_TASK_CREATION,

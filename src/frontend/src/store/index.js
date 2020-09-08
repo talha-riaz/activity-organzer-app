@@ -13,8 +13,6 @@ import {getState, setState, saveState} from './userSession'
 */
 const sagaMiddleware = createSagaMiddleware();
 
-/* const state = getState(); */
-
 /*
 creating the redux store, and passing the following;
 * 1. Combined reducer, derived from individual reducers
@@ -33,6 +31,8 @@ for(let saga in sagas){
     sagaMiddleware.run(sagas[saga]);
 }
 
+//Subscribing store to save state for the view
+//can prevent view from clearing on refresh
 /* store.subscribe(()=>{
     saveState(store.getState());
 }) */

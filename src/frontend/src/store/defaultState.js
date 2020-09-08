@@ -1,5 +1,6 @@
 import md5 from 'md5';
 
+//Default state tree for the application.
 export const defaultState = {
     users:[{
         id:"U1",
