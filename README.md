@@ -20,7 +20,8 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 
 You can verify if the server is running:
 <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/server.png" align="left"></img>
-
+<br>
+<br>
 ## Client
 
 1. After running the server, in a new Terminal window, navigate to ./activity-organizer-app/src/frontend
