@@ -19,9 +19,10 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 3. Run the command `npm start`. This will start the server on http://localhost:7777.
 
 You can verify if the server is running:
-<img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/server.png" align="left" display="block"></img>
-<br>
-<br>
+<div>
+  <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/server.png"></img>
+</div>
+
 ## Client
 
 1. After running the server, in a new Terminal window, navigate to ./activity-organizer-app/src/frontend
