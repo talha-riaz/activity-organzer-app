@@ -60,3 +60,17 @@ This application is built using the MERN stack (MongoDB, Express, React, Node), 
 # System Architecture
 <img src="https://github.com/talha-riaz/activity-organzer-app/blob/master/src/frontend/src/assets/SystemArchitecture.png"></img>
 
+# Upcoming Features!
+Current application architecture allows for easy scalability. 
+Following feautures are planned for future versions:
+
+### 1. Additional Task Information
+A comments section will be added under the task details page. 
+Story points for a task, and abililty to store additional information about the task.
+
+### 2. Update Account Settings
+Abiliy for the user to change their password, or delete their account. 
+
+### 3. User Avatar
+Allows user to add a profile avatar.
+
