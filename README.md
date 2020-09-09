@@ -38,6 +38,13 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 5. Log in using your credentials.
 6. The tasks persist and each user gets a personalized experience. 
 
+# Dev account
+There is already an account registered, if you wish to login without registering. 
+
+The login credentials are as follows:
+Username: `testdev`
+Password: `testdev`
+
 # Technology Stack
 This application is build using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
 
