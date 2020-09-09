@@ -8,9 +8,6 @@ function Footer() {
                 <div class="footer-inner">
                     <div class="footer-inner-left">
                         <div class="footer-logo-container"> 
-                            <img src={require('../assets/insta.png')} class="footer-logo"/>
-                        </div>
-                        <div class="footer-logo-container"> 
                             <h1>Site map</h1>
                             <a>About</a>
                             <a>Contact</a>
