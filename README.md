@@ -69,7 +69,7 @@ A comments section will be added under the task details page.
 Story points for a task, and abililty to store additional information about the task.
 
 ### 2. Update Account Settings
-Abiliy for the user to change their password, or delete their account. 
+Ability for the user to change their password, or delete their account. 
 
 ### 3. User Avatar
 Allows user to add a profile avatar.
