@@ -40,7 +40,7 @@ Once the server is running,
 5. Log in using your credentials.
 6. The tasks persist and each user gets a personalized experience. 
 
-# Dev account
+## Dev account
 There is already an account registered, if you wish to login without registering. 
 
 The login credentials are as follows:
