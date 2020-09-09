@@ -50,7 +50,7 @@ Username: `testdev`
 Password: `testdev`
 
 # Technology Stack
-This application is build using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
+This application is built using the MERN stack (MongoDB, Express, React, Node), and Redux is used for state management.  
 
 |  |  |  |  |  |
 |---|---|---|---|---|
