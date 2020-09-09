@@ -42,6 +42,7 @@ Allows a user to register and organize activity tasks by Todo, Doing and Done. T
 There is already an account registered, if you wish to login without registering. 
 
 The login credentials are as follows:
+</br>
 Username: `testdev`
 Password: `testdev`
 
