@@ -37,7 +37,7 @@
     "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "history": "^4.7.2",
     "iiid": "^1.0.3",
