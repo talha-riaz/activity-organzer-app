@@ -28,7 +28,7 @@
     "cors": "^2.8.4",
     "cross-env": "^5.2.0",
     "css-loader": "^4.2.2",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "highground": "^1.0.3-beta",
     "mongodb": "^3.1.10",
     "nodemon": "^1.18.4",
